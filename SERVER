@@ -1,0 +1,40 @@
+----JAVASCRIPT FILE---
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World');
+  console.log(req.query.name);
+})
+
+app.get('/peanut', function (req, res) {
+  res.send('Hello peanut');
+  console.log(req.query);
+
+})
+
+app.listen(3000)
+
+----JSON FILE----
+
+{
+  "name": "12thjuly",
+  "version": "1.0.0",
+  "description":"",
+  "main":"server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+----TS FILE----
+
+let message: string = 'Hello World';
+console.log(message);
+
+----JSON FILE---
+
+{ "compilerOptions": { "target": "es5", "module": "commonjs", "outDir": "dist" }, "include": [ "src/**/*.ts" ], "exclude": [ "node_modules" ] } 
